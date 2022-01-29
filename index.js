@@ -4,12 +4,13 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const PaymentModel = require("./Models/PaymentModel");
 const PaymentRouter = require("./Router/PaymentRouter");
-const TeacherRouter = require("./Router/TeacherRouter");
+
 const StudentRouter = require("./Router/StudentRouter");
 const RoutineRouter = require("./Router/RoutineRouter");
 const ResultRouter = require("./Router/ResultRouter");
 const educationRouter = require("./Router/EducationRouter");
 const SettingRouter = require("./Router/SettingRouter");
+const TeacherRouter = require("./Router/TeacherRouter");
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cors());

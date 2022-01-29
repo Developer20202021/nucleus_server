@@ -1,5 +1,5 @@
 const express = require("express");
-const TeacherModel = require("../Models/teacherModel");
+const TeacherModel = require("../Models/TeacherModel");
 
 
 
