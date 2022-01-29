@@ -15,6 +15,9 @@ app.use(express.urlencoded({extended:true}));
 app.use(cors());
 
 
+const port = process.env.PORT || 5000
+
+
     mongoose.connect("mongodb://nucleus:nucleus2022@cluster0-shard-00-00.l9s4l.mongodb.net:27017,cluster0-shard-00-01.l9s4l.mongodb.net:27017,cluster0-shard-00-02.l9s4l.mongodb.net:27017/nucleus?ssl=true&replicaSet=atlas-rb992z-shard-0&authSource=admin&retryWrites=true&w=majority",{
         useNewUrlParser: true,
         useUnifiedTopology: true,
@@ -67,7 +70,7 @@ app.use("/setting-function", SettingRouter)
 
 
 
-app.listen(5000,()=>{
+app.listen(port,()=>{
 
 
     console.log("Server is running");

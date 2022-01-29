@@ -164,16 +164,16 @@ RoutineRouter.get("/due-routine-subject-name-query", async (req, res)=>{
     const {teacherSubject} = req.query;
 
 
-    const teacherSubject = await RoutineModel.find({ teacherSubject:teacherSubject});
+    const TeacherSubject = await RoutineModel.find({ teacherSubject:teacherSubject});
 
    
     try {
 
-        if (teacherSubject.length>0) {
+        if (TeacherSubject.length>0) {
     
-            res.status(200).json(teacherSubject)
+            res.status(200).json(TeacherSubject)
     
-            console.log(teacherSubject);
+            console.log(TeacherSubject);
         }
     
         else{
